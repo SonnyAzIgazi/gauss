@@ -12,11 +12,11 @@ typedef struct Pos {
 	int column;
 } Pos;
 
-Gauss** gauss(int m, int n, float matrix[][n]) {
-	Gauss** matr = malloc(sizeof(float*) * m);
+Gauss** gauss(int m, int n, float matrix[m][n]) {
+	Gauss** matr = malloc(sizeof(Gauss*) * m);
 
 	for (int i = 0; i < m; i++) {
-		matr[i] = malloc(sizeof(float*) * n);
+		matr[i] = malloc(sizeof(Gauss) * n);
 
 		for (int j = 0; j < n; j++) {
 			matr[i][j].generaloIsmeretlen = 0;
